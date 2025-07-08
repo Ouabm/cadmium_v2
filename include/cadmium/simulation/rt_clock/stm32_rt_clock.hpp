@@ -33,7 +33,6 @@ private:
     }
 
     uint32_t getTimerFreqHz() const {
-        // Le timer compte à cette fréquence (ex: 1 MHz → 1 tick = 1 µs)
         return HAL_RCC_GetPCLK1Freq() / (htim2.Init.Prescaler + 1);
     }
 
